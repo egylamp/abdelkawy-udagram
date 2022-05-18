@@ -2,12 +2,13 @@
   "name": "abdelkawy-udagram-frontend",
   "version": "0.0.1",
   "author": "ABDELKAWY A. ABDELAZIZ",
-  "homepage": "https://ionicframework.com/",
+  "homepage": "http://abdelkawy-udagram-frontend.s3-website-us-east-1.amazonaws.com/",
   "scripts": {
     "ng": "ng",
     "start": "ng serve",
     "build": "ng build",
     "test": "ng test",
+    "test2": "echo \"Error: no test specified\" && exit 1",
     "lint": "ng lint",
     "e2e": "ng e2e"
   },
