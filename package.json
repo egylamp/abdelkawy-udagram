@@ -7,8 +7,8 @@
         "fe-build": "cd frontend && yarn build",
         "be-test": "cd backend && yarn test",
         "fe-test": "cd frontend && yarn test",
-        "be-deploy": "cd backend/dist && eb init abdelkawy-udagram-api -r $AWS_DEFAULT_REGION -p node.js && eb use abdelkawy-udagram-api-dev &&  eb setenv POSTGRES_HOST=$POSTGRES_HOST POSTGRES_DB=$POSTGRES_DB POSTGRES_USERNAME=$POSTGRES_USERNAME POSTGRES_PASSWORD=$POSTGRES_PASSWORD BCRYPT_PASSWORD=$BCRYPT_PASSWORD JWT_SECRET=$JWT_SECRET URL=$URL PORT=$PORT && eb deploy",
-        "fe-deploy": "aws s3 cp frontend/build/ s3://my-bucketddd1123 --recursive"
+        "be-deploy": "cd backend/www && eb init abdelkawy-udagram-api -r $AWS_DEFAULT_REGION -p node.js && eb use abdelkawy-udagram-api-dev &&  eb setenv POSTGRES_HOST=$POSTGRES_HOST POSTGRES_DB=$POSTGRES_DB POSTGRES_USERNAME=$POSTGRES_USERNAME POSTGRES_PASSWORD=$POSTGRES_PASSWORD BCRYPT_PASSWORD=$BCRYPT_PASSWORD JWT_SECRET=$JWT_SECRET URL=$URL PORT=$PORT && eb deploy",
+        "fe-deploy": "aws s3 cp frontend/www/ s3://abdelkawy-udagram-frontend --recursive"
     },
     "devDependencies": {}
 }
