@@ -7,8 +7,8 @@ orbs:
 jobs:
   CICD:
     docker:
-      - image: 'cimg/node:16.15.0'
-    steps: 
+      - image: "cimg/node:16.15.0"
+    steps:
       - node/install
       - checkout
       - eb/setup
@@ -17,7 +17,7 @@ jobs:
           aws-access-key-id: AWS_ACCESS_KEY_ID
           aws-secret-access-key: AWS_SECRET_ACCESS_KEY
           aws-region: AWS_DEFAULT_REGION
-   
+
       - run:
           name: Install Frontend  dependencies
           command: yarn fe-install
@@ -33,7 +33,7 @@ jobs:
       - run:
           name: Frontend test
           command: yarn fe-test
-      - run: 
+      - run:
           name: Backend test
           command: yarn be-test
       - run:
